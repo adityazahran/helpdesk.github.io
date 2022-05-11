@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 Route::get('ticket', [TicketsController::class, 'index']);
+Route::get('ticket/create', [TicketsController::class, 'create']);
+Route::post('ticket/create', [TicketsController::class, 'store']);
+Route::view('ticket/search', 'tickets/search');
+Route::get('ticket/{id}/edit', [TicketsController::class, 'edit']);
+Route::put('ticket/{id}', [TicketsController::class, 'update']);
+Route::delete('ticket/{id}', [TicketsController::class, 'destroy']);

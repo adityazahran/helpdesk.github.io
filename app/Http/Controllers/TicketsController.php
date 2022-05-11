@@ -13,6 +13,9 @@ class TicketsController extends Controller
             'tickets' => Ticket::orderBy('id', 'desc')->get()
         ]);
         }
+    public function create(){
+        return view('tickets.create');
+        }
 
 
     public function store(Request $request){
@@ -21,8 +24,7 @@ class TicketsController extends Controller
             'divisi' => $request->divisi,
             'topik' => $request->topik,
             'alat' => $request->alat,
-            'keterangan' => $request->keterangan,
-            'status' => $request->status,
+            'keterangan' => $request->keterangan
         ]);
         return back();
         }
@@ -30,15 +32,19 @@ class TicketsController extends Controller
     public function edit($id){
 
         // $Tickets = Ticket::where('id', $id)->first();
-        $Tickets = Ticket::find($id);
-        return view('tickets.edit', ['Tickets' => $Tickets]);
+        $index = Ticket::find($id);
+        return view('tickets.edit', ['edit' => $index]);
         }
 
     public function update(Request $request, $id){
         Ticket::find($id)->update([
-            'list' => $request->list,
+            'nama' => $request->nama,
+            'divisi' => $request->divisi,
+            'topik' => $request->topik,
+            'alat' => $request->alat,
+            'keterangan' => $request->keterangan
         ]);
-        return redirect('Tickets');
+        return redirect('ticket');
     }
     
     public function destroy($id){

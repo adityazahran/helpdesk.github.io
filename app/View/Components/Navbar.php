@@ -25,7 +25,9 @@ class Navbar extends Component
     {
         $navigations = [
             'Home' => '/',
-            'Buat Tiket Baru' => '/ticket',
+            'Buat Tiket Baru' => '/ticket/create',
+            'index tiket' =>'/ticket/',
+            'Cek Status Tiket' => '/ticket/search'
         ];
         return view('layouts.navbar', compact('navigations'));
     }

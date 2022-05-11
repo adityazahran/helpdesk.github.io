@@ -24,6 +24,14 @@
         <td>{{ $ticket->alat }}</td>
         <td>{{ $ticket->keterangan }}</td>
         <td>{{ $ticket->status }}</td>
+        <td><a href="/ticket/{{ $ticket->id }}/edit">Edit</a>
+          <form action="/ticket/{{ $ticket->id }}" method="post">
+            @csrf
+            @method('delete')
+        <button class="px-2 py-4 bg-gray-400" role="button" type="submit">
+          Delete</i>
+        </button>
+      </td>
       </tr>
       @endforeach
     </tbody>
