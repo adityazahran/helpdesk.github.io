@@ -7,9 +7,10 @@
     <link href="/css/app.css" rel="stylesheet">
     <title>{{ $title }} - Helpdesk PT Tirta Asasta</title>
 </head>
-<body>
+<body class="">
     <x-navbar></x-navbar>
     {{ $slot }}
-    <h1 class="font-bold"></h1>
+    <x-footer></x-footer>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 </html>
