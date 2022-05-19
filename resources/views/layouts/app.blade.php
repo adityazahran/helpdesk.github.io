@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/app.css" rel="stylesheet">
     <title>{{ $title }} - Helpdesk PT Tirta Asasta</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body class="">
     <x-navbar></x-navbar>

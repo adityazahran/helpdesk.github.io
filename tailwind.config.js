@@ -7,22 +7,22 @@ module.exports = {
     './resources/**/*.blade.php',
     './resources/views/**/*.blade.php',
     './resources/views/tasks/**/*.blade.php',
-    './resources/layouts/**/*.blade.php',
-    './resources/js/**/*.vue',
+    './resources/layouts/**/*.blade.php', 
+    './resources/js/**/*.vue', 
   ],
-
-  theme: {
-    extend: {        
+ 
+  theme: {  
+    extend: {
       container: {
-        center: true,  
-      },            
-    }, 
-  },
+        center: true,    
+      },
+    },              
+  }, 
 
   variants: {
     extend: {
     },
-  },
+  },   
 
   // plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-};
+};               
